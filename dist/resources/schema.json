@@ -1,0 +1,89 @@
+{
+    "definitions": {
+        "asset": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "broadcastStartTime": {
+                    "type": "string"
+                },
+                "duration": {
+                    "type": "integer"
+                },
+                "image": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "title",
+                "description",
+                "broadcastStartTime",
+                "duration",
+                "image"
+            ]
+        },
+        "match": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "homeTeam": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "image": {
+                            "type": "string"
+                        },
+                        "address": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "id",
+                        "name",
+                        "image"
+                    ]
+                },
+                "awayTeam": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "image": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "id",
+                        "name",
+                        "image"
+                    ]
+                }
+            },
+            "required": [
+                "id",
+                "homeTeam",
+                "awayTeam"
+            ]
+        }
+    }
+}
